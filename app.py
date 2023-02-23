@@ -1,6 +1,10 @@
 import streamlit as st
 import requests
+import os
 from streamlit_lottie import st_lottie
+from dotenv import load_dotenv
+
+load_dotenv()
 
 st.set_page_config(page_title="Home", page_icon=":tada:")
 
@@ -19,7 +23,7 @@ def load_url(url):
         return None
     return r.json()
 
-lottie = load_url("https://assets3.lottiefiles.com/packages/lf20_hrkmmhjf.json")
+lottie = load_url(f"{os.getenv('URL')}")
 
 # Use local csss
 
@@ -64,8 +68,8 @@ with st.container():
     st.header("Contact Me!")
     st.write("\n")
 
-    contact_form = """
-    <form id="contactform" action="https://formsubmit.io/send/calcunningham44@icloud.com" method="POST">
+    contact_form = f"""
+    <form id="contactform" action="https://formsubmit.io/send/{os.getenv('EMAIL')}" method="POST">
         <input type="hidden" name="_captcha" value="false>
         <input name="name" type="text" id="name", placeholder="First Name" required>
         <input name="email" type="email" id="email"placeholder="Email Address" required>
