@@ -23,7 +23,7 @@ def load_url(url):
         return None
     return r.json()
 
-lottie = load_url(f"{os.getenv('URL')}")
+lottie = load_url(f"https://assets3.lottiefiles.com/packages/lf20_hrkmmhjf.json")
 
 # Use local csss
 
@@ -69,7 +69,7 @@ with st.container():
     st.write("\n")
 
     contact_form = f"""
-    <form id="contactform" action="https://formsubmit.io/send/{os.getenv('EMAIL')}" method="POST">
+    <form id="contactform" action="https://formsubmit.io/send/calcunningham44@icloud.com" method="POST">
         <input type="hidden" name="_captcha" value="false>
         <input name="name" type="text" id="name", placeholder="First Name" required>
         <input name="email" type="email" id="email"placeholder="Email Address" required>
