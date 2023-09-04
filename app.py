@@ -69,7 +69,7 @@ with st.container():
     st.write("\n")
 
     contact_form = f"""
-    <form id="contactform" action="https://formsubmit.io/send/calcunningham44@icloud.com" method="POST">
+    <form id="contactform" action="https://formsubmit.io/send/emailhere.com" method="POST">
         <input type="hidden" name="_captcha" value="false>
         <input name="name" type="text" id="name", placeholder="First Name" required>
         <input name="email" type="email" id="email"placeholder="Email Address" required>
